@@ -1,18 +1,16 @@
 // Set the initial countdown time (in seconds)
-const initialTime = 5400; // 1 hour 30 minutes
+const initialTime = 300; // 5 minutes
 
 function startCountdown(duration, display) {
-    let timer = duration, hours, minutes, seconds;
+    let timer = duration, minutes, seconds;
     setInterval(() => {
-        hours = Math.floor(timer / 3600);
-        minutes = Math.floor((timer % 3600) / 60);
+        minutes = Math.floor(timer / 60);
         seconds = Math.floor(timer % 60);
 
-        hours = hours < 10 ? "0" + hours : hours;
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
-        display.textContent = ` ${hours}:${minutes}:${seconds}`;
+        display.textContent = `${minutes}:${seconds}`;
 
         if (--timer < 0) {
             timer = duration; // Reset the timer
