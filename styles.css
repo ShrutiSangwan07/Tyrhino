@@ -539,7 +539,7 @@ main {
         width: 100%;
         overflow-x: hidden;
     }
-    .container {
+    .scroll-container {
         padding: 10px;
     }
 
@@ -556,6 +556,7 @@ main {
         flex-direction: column;
         height: auto;
         margin-left: 0;
+        overflow: hidden;
     }
 
     .offer-left{
